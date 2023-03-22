@@ -7,6 +7,9 @@ QUERY = '#EndAnglophoneCrisis'
 # Twitter bot setting for liking Tweets
 LIKE = True 
 
+# Twitter bot setting for retweeting Tweets
+RETWEET = True
+
 # Twitter bot setting for following user who tweeted
 FOLLOW = False
 

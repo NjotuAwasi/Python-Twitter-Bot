@@ -1,7 +1,7 @@
 import tweepy
 from time import sleep
 from credentials import *
-from config import QUERY, FOLLOW, LIKE, SLEEP_TIME
+from config import QUERY, FOLLOW, LIKE, RETWEET, SLEEP_TIME
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -18,8 +18,10 @@ while 1:
         try:
             print('\nTweet by: @' + tweet.user.screen_name)
 
-            tweet.retweet()
-            print('Retweeted the tweet')
+            #Retweet the tweet
+            if RETWEET:
+                tweet.retweet()
+                print('Retweeted the tweet')
 
             # Favorite the tweet
             if LIKE:
